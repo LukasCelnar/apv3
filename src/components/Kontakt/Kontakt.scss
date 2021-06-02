@@ -1,0 +1,99 @@
+@import '../../styles/variables.scss';
+
+.kontakt {
+    clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0% 100%);
+    background-color: $color-primary;
+    padding: 10rem 0 1rem 0;
+    color: $color-white;
+    text-align: center;
+    height: 100%;
+
+    &__copyright {
+        font-size: 2rem;
+        padding-top: 5rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font-regular;
+        font-size: 2.1rem;
+
+        &-img {
+            border-radius: 50%;
+            height: 16rem;
+            margin-right: 2rem;
+            box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+        }
+
+        &-header {
+            font-size: 3.5rem;
+            font-family: $font-medium;
+        }
+
+        &-title {
+            padding-bottom: 1rem;
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .kontakt {
+        clip-path: polygon(0 7.5rem, 100% 0, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0 7.5rem, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@media (max-width: 650px) {
+    .kontakt {
+        clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0 4rem, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@media (max-width: 550px) {
+    .kontakt {
+        &__copyright {
+            font-size: 1.8rem;
+        }
+    
+        &__content {
+            font-size: 1.85rem;
+    
+            &-img {
+                height: 13rem;
+            }
+    
+            &-header {
+                font-size: 3.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .kontakt {
+        padding: 7rem 0 1rem 0;
+
+        &__copyright {
+            font-size: 1.8rem;
+            padding-top: 3.5rem;
+        }
+    
+        &__content {
+            display: block;
+            font-size: 2rem;
+    
+            &-img {
+                height: 13rem;
+                margin: 0;
+            }
+    
+            &-header {
+                font-size: 3.3rem;
+            }
+        }
+    }
+}

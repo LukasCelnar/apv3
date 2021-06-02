@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "type": "img",
+        "img": "viz1.jpg"
+    },
+    {
+        "id": 2,
+        "type": "header",
+        "text": "Vizualizace",
+        "empty": false
+    },
+    {
+        "id": 3,
+        "type": "img",
+        "img": "viz2.jpg"
+    },
+    {
+        "id": 4,
+        "type": "img",
+        "img": "viz3.jpg"
+    },
+    {
+        "id": 5,
+        "type": "img",
+        "img": "viz4.jpg"
+    },
+    {
+        "id": 6,
+        "type": "header",
+        "empty": true
+    },
+
+    {
+        "id": 7,
+        "type": "img",
+        "img": "viz5.jpg"
+    },
+    {
+        "id": 8,
+        "type": "header",
+        "text": "Model",
+        "empty": false
+    },
+    {
+        "id": 9,
+        "type": "img",
+        "img": "viz6.jpg"
+    },
+    {
+        "id": 10,
+        "type": "img",
+        "img": "viz7.jpg"
+    },
+    {
+        "id": 11,
+        "type": "img",
+        "img": "viz8.jpg"
+    },
+    {
+        "id": 12,
+        "type": "header",
+        "empty": true
+    }
+]

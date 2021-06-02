@@ -1,0 +1,134 @@
+@import '../../styles/variables.scss';
+
+.poloha {
+
+    margin-top: 6.5rem;
+    padding: 8rem 0;
+    background-color: $color-primary;
+    color: $color-white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: $font-regular;
+    //clip-path: polygon(0 7%, 100% 0, 100% 93%, 0% 100%);
+    clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0% 100%);
+    -webkit-clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0% 100%);
+
+    &__header {
+        font-size: 5rem;
+        font-family: $font-medium;
+        padding: 2rem 0;
+    }
+
+    &__content {
+        width: 45%;
+        margin: 0 auto;
+    }
+
+    &__map {
+        width: 80%;
+        height: 70rem;
+        margin: 2rem 0 6rem 0;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+    }
+
+    &__second {
+
+        &-header {
+            font-size: 3rem;
+            font-family: $font-medium;
+            padding: 2rem 0;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: center;
+
+            &-item {
+                
+                padding: 0 2rem;
+
+                &-icon {
+                    font-size: 10rem;
+                }
+
+                &-header {
+                    font-size: 2.5rem;
+                    font-family: $font-medium;
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .poloha {
+        margin-top: 0;
+        clip-path: polygon(0 7.5rem, 100% 0, 100% calc(100% - 7.5rem), 0% 100%);
+        -webkit-clip-path: polygon(0 7.5rem, 100% 0, 100% calc(100% - 7.5rem), 0% 100%);
+    }
+}
+
+@media (max-width: 1200px) {
+    .poloha {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .poloha {
+        &__content {
+            width: 85%;
+        }
+    }
+}
+ 
+@media (max-width: 650px) {
+    .poloha {
+        padding: 8rem 0;
+        font-size: 1.8rem;
+        clip-path: polygon(0 4rem, 100% 0, 100% calc(100% - 4rem), 0% 100%);
+        -webkit-clip-path: polygon(0 4rem, 100% 0, 100% calc(100% - 4rem), 0% 100%);
+
+        &__content {
+            font-size: 1.6rem;
+        }
+
+        &__header {
+            font-size: 4rem;
+            padding: 2rem 0;
+        }
+
+        &__map {
+            width: 80%;
+            height: 40rem;
+            margin: 2rem 0 3rem 0;
+        }
+
+        &__second {
+
+            &-header {
+                font-size: 2.3rem;
+                padding: 2rem 0.5rem 0 0.5rem;
+            }
+
+            &-content {
+                display: block;
+
+                &-item {
+                    
+                    &-icon {
+                        transform: scale(0.7);
+                    }
+
+                    padding: 0;
+
+                    &-header {
+                        font-size: 2.2rem;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}

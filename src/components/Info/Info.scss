@@ -1,0 +1,258 @@
+@import '../../styles/variables.scss';
+
+.info {
+    //overflow-x: hidden;
+
+    &__header {
+        font-size: 4rem;
+        text-align: center;
+        font-family: $font-regular;
+        padding: 2rem 0 2rem 0;
+    }
+
+    &__content {
+        display: flex;
+        //width: 90vw;
+        height: 47rem;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    &__specs {
+        min-width: 50rem;
+        height: 100%;
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 3rem rgba($color-black, .3);
+        animation: moveDown 0.7s ease-out;
+
+        &-header {
+            padding-top: 0.5rem;
+        }
+
+        &-header, &-footer {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        &-content {
+            display: flex;
+
+            &-left-column {
+                width: 65%;
+                padding-left: 2rem;
+            }
+
+            &-left-column > div, &-right-column > div{
+                margin: 2.15rem 0;
+                font-size: 2rem;
+                font-family: $font-regular;
+            }
+
+            &-right-column {
+                width: 35%;
+            }
+        }
+    }
+
+    &__img {
+        height: 85%;
+
+        box-shadow: 0 1rem 3rem rgba($color-black, .3);
+        animation: moveUp 0.7s ease-out;
+    }
+
+    /*
+    @keyframes moveDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-5rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveUp {
+        0% {
+            opacity: 0;
+            transform: translateY(5rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    */
+
+}
+
+@media (max-width: 1850px) {
+    .info {
+        /*
+        &__img {
+            height: 75%;
+        }
+        */
+        &__content {
+            transform: scale(0.9);
+        }
+    }
+}
+
+@media (max-width: 1660px) {
+    .info {
+        &__content {
+            transform: scale(0.8);
+        }
+    }
+}
+
+@media (max-width: 1490px) {
+    .info {
+        &__content {
+            transform: scale(0.7);
+        }
+        
+        &__header {
+            font-size: 3.5rem;
+            padding-bottom: 0;
+            transform: translateY(5rem);
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .info {
+        &__content {
+            transform: scale(0.65);
+        }
+
+        &__header {
+            font-size: 3.5rem;
+            padding: 0rem 0 0rem 0;
+        }
+    }
+}
+
+@media (max-width: 1210px) {
+    .info {
+        &__content {
+            transform: scale(0.6);
+        }
+    }
+}
+
+@media (max-width: 1110px) {
+    .info {
+        //margin-bottom: 90rem;
+        &__content {
+            display: block;
+            padding: 1rem 8rem;
+            transform: scale(1);
+
+            height: 100%;
+        }
+  
+        &__img {
+            height: auto;
+            width: 100%;
+            box-shadow: none;
+
+            &-left {
+                transform: translateY(4px);
+            }
+        }
+
+        &__specs {
+            width: 100%;
+            min-width: 0;
+            box-shadow: 0 0 0 0;
+        }
+
+        &__header {
+            transform: translateY(0);
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .info {
+        &__header {
+            font-size: 2.7rem;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .info {
+        &__content {
+            padding: 1rem 2rem;
+        }
+
+        &__header {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .info {
+        &__header {
+            font-size: 2rem;
+        }
+
+        &__content {
+            padding: 1rem 1rem;
+        }
+
+        &__specs {
+    
+            &-header, &-footer {
+                font-size: 2.8rem;
+            }
+    
+            &-content {
+                
+                &-left-column {
+                    width: 65%;
+                    padding-left: 2rem;
+                }
+    
+                &-left-column > div, &-right-column > div{
+                    margin: 1.9rem 0;
+                    font-size: 1.9rem;
+                }
+    
+                &-right-column {
+                    width: 35%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .info {
+        &__specs {
+            &-header, &-footer {
+                font-size: 2.7rem;
+            }
+    
+            &-content {
+                
+                &-left-column {
+                    padding-left: 1.2rem;
+                }
+    
+                &-left-column > div, &-right-column > div{
+                    font-size: 1.5rem;
+                }
+            }   
+        }
+    }
+}

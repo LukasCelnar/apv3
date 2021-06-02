@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.video {
+    &__header {
+        font-size: 4rem;
+        color: $color-primary;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    &__video-player {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2.5rem 0;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+
+        
+        width: 102rem;
+        height: 60.5rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    .video {
+
+        &__video-player {
+            max-width: 80rem;
+            max-height: 40rem;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .video {
+
+        &__video-player {
+            max-width: 80%;
+            max-height: 40rem;
+        }
+    }
+}

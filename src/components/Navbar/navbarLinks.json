@@ -1,0 +1,30 @@
+[
+    {
+        "name": "info",
+        "to": "/#info"
+    },
+    {
+        "name": "poloha",
+        "to": "/#poloha"
+    },
+    {
+        "name": "video",
+        "to": "/#video"
+    },
+    {
+        "name": "karta",
+        "to": "/karta"
+    },
+    {
+        "name": "vizualizace",
+        "to": "/vizualizace"
+    },
+    {
+        "name": "brožura",
+        "to": "/brozura"
+    },
+    {
+        "name": "kontakt",
+        "to": "/#kontakt"
+    }
+]
