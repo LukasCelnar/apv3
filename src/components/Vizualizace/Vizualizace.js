@@ -1,14 +1,18 @@
 import React from 'react';
 import './Vizualizace.scss';
 import images from './images.json';
+import { useLocation } from 'react-router-dom';
 
 const Vizualizace = () => {
+
+    const code = useLocation().pathname.split('/')[1]
 
     const renderVizualizace = () => {
         return images.map((item, i) => {
             switch (item.type) {
                 case 'img':
-                    return <div key={i} className={`vizualizace__div-${item.id}`}><a href={`imgs/${item.img}`}><img className='vizualizace__img' src={`/imgs/${item.img}`} alt={item.img} /></a></div>;
+                    const imgPath = `/assets/${code}/${item.img}`
+                    return <div key={i} className={`vizualizace__div-${item.id}`}><a href={imgPath}><img className='vizualizace__img' src={imgPath} alt={item.img} /></a></div>;
                 case 'header':
                     if (item.empty) {
                         return <div key={i} className={`vizualizace__div-${item.id} vizualizace__header vizualizace__header-empty`}></div>;

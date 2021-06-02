@@ -9,7 +9,6 @@ const Navbar = () => {
     const [showHamburgerList, setShowHamburgetList] = useState(false)
 
     const code = useLocation().pathname.split('/')[1]
-    console.log(code)
 
     const scrollWidthOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;

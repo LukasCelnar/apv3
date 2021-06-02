@@ -2,10 +2,14 @@ import React from 'react';
 import './Pdf.scss';
 import { useLocation } from 'react-router-dom';
 
-const Pdf = ({ pdfPath }) => {
-    const location = useLocation()
+const Pdf = ({ pdfPath, dynamic }) => {
+    const code = useLocation().pathname.split('/')[1]
 
-	console.log(location)
+    if (dynamic) {
+        pdfPath = pdfPath.replace(':code', code)
+    }
+
+    console.log(pdfPath)
 
     return (
         <div className='pdf'>

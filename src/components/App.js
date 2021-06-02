@@ -35,7 +35,7 @@ const App = () => {
 				</Route>
 				<Route path='/:code' exact component={MainPage} />
 				<Route path='/:code/karta' exact>
-					<Pdf pdfPath='/pdfs/karta.pdf'/>
+					<Pdf pdfPath={`/assets/:code/karta.pdf`} dynamic/>
 				</Route>
 				<Route path='/:code/brozura' exact>
 					<Pdf pdfPath='/pdfs/brozura.pdf'/>
