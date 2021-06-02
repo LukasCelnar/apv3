@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Info from './Info/Info';
 import Poloha from './Poloha/Poloha';
@@ -30,14 +30,17 @@ const App = () => {
 		<Router>
 			<Navbar />
 			<Switch>
-				<Route path='/' exact component={MainPage} />
-				<Route path='/karta' exact>
+				<Route path='/' exact>
+					<Redirect to='/B60804' />
+				</Route>
+				<Route path='/:code' exact component={MainPage} />
+				<Route path='/:code/karta' exact>
 					<Pdf pdfPath='/pdfs/karta.pdf'/>
 				</Route>
-				<Route path='/brozura' exact>
+				<Route path='/:code/brozura' exact>
 					<Pdf pdfPath='/pdfs/brozura.pdf'/>
 				</Route>
-				<Route path='/vizualizace' exact component={Vizualizace} />
+				<Route path='/:code/vizualizace' exact component={Vizualizace} />
 			</Switch>
 		</Router>
 	);

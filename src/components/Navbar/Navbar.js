@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import navbarLinks from './navbarLinks.json'
+import { useLocation } from 'react-router-dom';
+import navbarLinks from './navbarLinks.json';
 import './Navbar.scss';
 
 const Navbar = () => {
     const [currentBtn, setCurrentBtn] = useState(0)
     const [showHamburgerList, setShowHamburgetList] = useState(false)
+
+    const code = useLocation().pathname.split('/')[1]
+    console.log(code)
 
     const scrollWidthOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -20,7 +24,7 @@ const Navbar = () => {
 
             return (
                 <li key={i} onClick={() => setCurrentBtn(i)} className={buttonClass}>
-                    <Link to={navLink.to} scroll={scrollWidthOffset} onClick={() => setShowHamburgetList(false)} className='navbar__button-link'>
+                    <Link to={`/${code}/${navLink.to}`} scroll={scrollWidthOffset} onClick={() => setShowHamburgetList(false)} className='navbar__button-link'>
                         {navLink.name}
                     </Link>
                 </li>
