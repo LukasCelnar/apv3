@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useLocation } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Info from './Info/Info';
 import Poloha from './Poloha/Poloha';
@@ -11,6 +11,10 @@ import './App.scss';
 
 // root route components combined together
 const MainPage = () => {
+	const location = useLocation()
+
+	console.log(location)
+
 	return (
 		<>
 			<Info />

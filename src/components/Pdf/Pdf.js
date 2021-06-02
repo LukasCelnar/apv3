@@ -1,7 +1,12 @@
 import React from 'react';
 import './Pdf.scss';
+import { useLocation } from 'react-router-dom';
 
 const Pdf = ({ pdfPath }) => {
+    const location = useLocation()
+
+	console.log(location)
+
     return (
         <div className='pdf'>
             <object data={pdfPath + '#view=Fit'} type='application/pdf' width='100%' height='100%'>
