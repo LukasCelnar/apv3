@@ -13,7 +13,7 @@ const Info = () => {
 
     useEffect(() => {
 
-        fetch(`/assets/${code}/infoData.json`)
+        fetch(`/dynamic/${code}/infoData.json`)
             .then(res => res.json())
             .then(data => setInfoData(data))
             .catch(err => console.log(err))
@@ -36,7 +36,7 @@ const Info = () => {
         <div className='info' id='info'>
            <div className='info__header'>{infoData.header}</div>
            <div className='info__content'>
-                <img className='info__img info__img-left' alt='main-picutre1' src='/imgs/main1.jpg'/>
+                <img className='info__img info__img-left' alt='main-picutre1' src='/static/main1.jpg'/>
                 <div className='info__specs'>
                     <div className='info__specs-header'>{infoData.specs.header}</div>
                     <div className='info__specs-content' style={{display: 'flex'}}>
@@ -49,7 +49,7 @@ const Info = () => {
                     </div>
                     <div className='info__specs-footer'>{infoData.specs.price}</div>
                 </div>
-                <img className='info__img info__img-right' alt='main-picture2' src='/imgs/main2.jpg'/>
+                <img className='info__img info__img-right' alt='main-picture2' src='/static/main2.jpg'/>
            </div>
         </div>
     );

@@ -35,10 +35,10 @@ const App = () => {
 				</Route>
 				<Route path='/:code' exact component={MainPage} />
 				<Route path='/:code/karta' exact>
-					<Pdf pdfPath={`/assets/:code/karta.pdf`} dynamic/>
+					<Pdf pdfPath={`/dynamic/:code/karta.pdf`} dynamic/>
 				</Route>
 				<Route path='/:code/brozura' exact>
-					<Pdf pdfPath='/pdfs/brozura.pdf'/>
+					<Pdf pdfPath='/static/brozura.pdf'/>
 				</Route>
 				<Route path='/:code/vizualizace' exact component={Vizualizace} />
 			</Switch>

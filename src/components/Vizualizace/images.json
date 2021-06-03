@@ -18,12 +18,14 @@
     {
         "id": 4,
         "type": "img",
-        "img": "viz3.jpg"
+        "img": "viz3.jpg",
+        "static": true
     },
     {
         "id": 5,
         "type": "img",
-        "img": "viz4.jpg"
+        "img": "viz4.jpg",
+        "static": true
     },
     {
         "id": 6,

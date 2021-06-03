@@ -5,7 +5,7 @@ const Kontakt = () => {
     return (
         <div className='kontakt' id='kontakt'>
             <div className='kontakt__content'>
-                <img className='kontakt__content-img' src='/imgs/profile.jpg' alt='profile' />
+                <img className='kontakt__content-img' src='/static/profile.jpg' alt='profile' />
                 <div>
                     <div className='kontakt__content-header'>David Celnar</div>
                     <div className='kontakt__content-title'>Manažer prodeje</div>

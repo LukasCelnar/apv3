@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <div className='navbar'>
-            <img className='navbar__logo' src='/imgs/logo.jpg' alt='logo' />
+            <img className='navbar__logo' src='/static/logo.jpg' alt='logo' />
             <div className='navbar__hamburger' onClick={() => setShowHamburgetList(!showHamburgerList)}>
                 <div className='navbar__hamburger-bar'></div>
                 <div className='navbar__hamburger-bar navbar__hamburger-bar-mid'></div>

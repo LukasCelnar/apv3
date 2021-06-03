@@ -11,7 +11,10 @@ const Vizualizace = () => {
         return images.map((item, i) => {
             switch (item.type) {
                 case 'img':
-                    const imgPath = `/assets/${code}/${item.img}`
+                    let imgPath = `/dynamic/${code}/${item.img}`
+                    if (item.static) {
+                        imgPath = `/static/${item.img}`
+                    }
                     return <div key={i} className={`vizualizace__div-${item.id}`}><a href={imgPath}><img className='vizualizace__img' src={imgPath} alt={item.img} /></a></div>;
                 case 'header':
                     if (item.empty) {
