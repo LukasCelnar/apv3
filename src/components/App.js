@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Redirect, Route, Switch, useLocation } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
 import Info from './Info/Info';
@@ -11,13 +11,28 @@ import './App.scss';
 
 // root route components combined together
 const MainPage = () => {
+	const [error, setError] = useState(false)
 	const location = useLocation()
 
-	console.log(location)
+	const code = useLocation().pathname.split('/')[1];
+
+	useEffect(() => {
+        
+        fetch(`/dynamic/${code}/infoData.json`)
+        .then(res => res.json())
+        .then(data => console.log(data))
+        .catch(err => {
+            setError(true)
+        })
+    }, [code])
+
+	if (error) {
+		return <Redirect push to="/" />
+	}
 
 	return (
 		<>
-			<Info />
+			<Info/>
 			<Poloha />
 			<Video />
 			<Kontakt />
@@ -26,14 +41,17 @@ const MainPage = () => {
 }
 
 const App = () => {
+
 	return (
 		<Router>
 			<Navbar />
 			<Switch>
 				<Route path='/' exact>
-					<Redirect to='/B60804' />
+					<Redirect to='/B20701' />
 				</Route>
-				<Route path='/:code' exact component={MainPage} />
+				<Route path='/:code' exact>
+					<MainPage />
+				</Route>
 				<Route path='/:code/karta' exact>
 					<Pdf pdfPath={`/dynamic/:code/karta.pdf`} dynamic/>
 				</Route>

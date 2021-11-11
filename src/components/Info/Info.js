@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './Info.scss';
 import {useLocation} from 'react-router-dom';
+import { Redirect } from 'react-router';
 
 /* const code = useLocation().pathname.split('/')[1] */
 
@@ -10,15 +11,17 @@ const Info = () => {
     const [infoData, setInfoData] = useState(null)
 
     const code = useLocation().pathname.split('/')[1];
-
+    
     useEffect(() => {
-
+        
         fetch(`/dynamic/${code}/infoData.json`)
-            .then(res => res.json())
-            .then(data => setInfoData(data))
-            .catch(err => console.log(err))
+        .then(res => res.json())
+        .then(data => setInfoData(data))
+        .catch(err => {
+            console.log(err)
+        })
     }, [infoData, code])
-
+    
     const renderSpecsContent = () => {
         const specsContent = {keys: [], values: []}
         for (const key in infoData.specs.content) {
@@ -31,6 +34,7 @@ const Info = () => {
     if (!infoData) {
         return null
     }
+
 
     return (
         <div className='info' id='info'>
