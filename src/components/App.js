@@ -47,7 +47,7 @@ const App = () => {
 			<Navbar />
 			<Switch>
 				<Route path='/' exact>
-					<Redirect to='/B20701' />
+					<Redirect to='/B30504' />
 				</Route>
 				<Route path='/:code' exact>
 					<MainPage />
